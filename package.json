@@ -1,0 +1,69 @@
+{
+  "name": "pi-browse",
+  "version": "0.1.0",
+  "description": "Browser-first web access for pi — real Chromium rendering, multi-step interaction, clean extraction. Replaces pi-web-access with depth instead of a provider zoo.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "browser",
+    "browse",
+    "playwright",
+    "chromium",
+    "web",
+    "scraping",
+    "extraction",
+    "fetch"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Dimas Victor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvictor357/pi-browse.git"
+  },
+  "type": "module",
+  "main": "extensions/index.ts",
+  "files": [
+    "extensions/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  },
+  "dependencies": {
+    "defuddle": "^0.19.3",
+    "linkedom": "^0.18.13",
+    "playwright-core": "1.63.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^1.0.0",
+    "@earendil-works/pi-coding-agent": "^1.0.0",
+    "@earendil-works/pi-tui": "^1.0.0",
+    "@types/node": "^26.6.4",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typebox": "^1.3.34",
+    "typescript": "^5.9.3"
+  }
+}
